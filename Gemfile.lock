@@ -285,7 +285,7 @@ DEPENDENCIES
   rails (~> 6.1.7, >= 6.1.7.6)
   sass-rails (>= 6)
   selenium-webdriver (>= 4.0.0.rc1)
-  sqlite3 (~> 1.4)
+  sqlite3
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
