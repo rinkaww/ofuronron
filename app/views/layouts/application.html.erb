@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tomato</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+    <script src="https://kit.fontawesome.com/3c4d7f66ab.js"  crossorigin="anonymous"></script> 
+
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
+  </head>
+
+  <body>
+   <header>
+    <h1>おふろんろん</h1>
+    <div class="header-list">
+     <ul>
+      <% if user_signed_in? %>
+       <li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+      <% else %>
+       <li><%= link_to "新規登録", new_user_registration_path %></li>
+       <li><%= link_to "ログイン", new_user_session_path %></li>
+      <% end %>
+     </ul>
+    </div>
+   </header>
+   <main>
+     <%= yield %>
+   </main>
+
+  </body>
+</html>

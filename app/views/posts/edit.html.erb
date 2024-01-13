@@ -1,0 +1,17 @@
+<%= form_for @post do |f| %>
+    <%= f.label :報告 %>
+    <%= f.text_field :houkoku, :size => 140 %> 
+    <%= f.label :使用したお風呂グッズ %>
+    <%= f.text_field :goods, :size => 140 %> 
+    <%= f.label :画像 %>
+    <%= f.file_field :image %>
+
+    <%= f.label :share %>
+    <%= f.text_field :share, :size => 140 %> 
+    
+    
+    <%= f.submit "編集する" %>
+
+    <%= link_to "一覧に戻る", posts_path %>
+
+<% end %>

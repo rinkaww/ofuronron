@@ -1,0 +1,43 @@
+// Place all the styles related to the aromas controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.button {
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    width: 120px;
+    margin: auto;
+    padding: 30px;
+    font-weight: bold;
+    border: 2px solid #27acd9;
+    color: #27acd9;
+    transition: 0.5s;
+}
+.button input{
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    width: 120px;
+    margin: 0px;
+    padding: 1rem 4rem;
+    font-weight: bold;
+    border: 2px solid #27acd9;
+    color: #27acd9;
+    transition: 0.5s;
+}
+.button:hover,
+.button:hover input[type="submit"] {
+    color: white;
+    background: #27acd9;
+}
+
+
+
+
+
+
+
+

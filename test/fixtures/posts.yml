@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  houkoku: MyString
+  datetime: 2023-12-04 19:00:00
+  goods: MyString
+  share: MyText
+
+two:
+  name: MyString
+  houkoku: MyString
+  datetime: 2023-12-04 19:00:00
+  goods: MyString
+  share: MyText

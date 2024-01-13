@@ -1,0 +1,41 @@
+<h1>tomatooto</h1>
+<h3>新規投稿ページ</h3>
+<%= form_for @post do |f| %>
+
+  <div class="field">
+    <%= f.label :報告  %>
+    <%= f.select :houkoku, 
+    [["お風呂がんばるよ！", "お風呂がんばるよ！"], 
+    ["お風呂入ったよ！", "お風呂入ったよ！"]], include_blank: "選択して下さい" %>
+  </div>
+
+  <div class="field">
+   <%= f.label :お風呂グッズ %>
+   <%= f.text_field :goods, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :share  %>
+    <%= f.text_area :share, :size => "30x2" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>  
+
+  <div class='form-group'>
+    <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %>
+      <div class='form-check'>
+          <%= tag.label class: 'form-check-label' do %>
+              <%= tag.check_box class: 'form-check-input' %>
+              <%= tag.text %>
+          <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= f.submit "お風呂状況をみんなに知らせる！！" %>
+<% end %>
+
+<%= link_to "一覧に戻る", posts_path %>
